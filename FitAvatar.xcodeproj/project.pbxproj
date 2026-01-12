@@ -16,6 +16,26 @@
 		1E5C85082E609D81001C496D /* FitAvatarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85072E609D81001C496D /* FitAvatarTests.swift */; };
 		1E5C85122E609D82001C496D /* FitAvatarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85112E609D82001C496D /* FitAvatarUITests.swift */; };
 		1E5C85142E609D82001C496D /* FitAvatarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85132E609D82001C496D /* FitAvatarUITestsLaunchTests.swift */; };
+		1E5C852D2E60A3AB001C496D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C852C2E60A3AB001C496D /* MainTabView.swift */; };
+		1E5C852F2E60A3C9001C496D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C852E2E60A3C9001C496D /* HomeView.swift */; };
+		1E5C85312E60A3E5001C496D /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85302E60A3E5001C496D /* WorkoutView.swift */; };
+		1E5C85332E60A3F8001C496D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85322E60A3F8001C496D /* StatisticsView.swift */; };
+		1E5C85372E67C270001C496D /* WorkoutRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85362E67C270001C496D /* WorkoutRecordView.swift */; };
+		1E5C85392E67C292001C496D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85382E67C292001C496D /* Exercise.swift */; };
+		1E5C853B2E67C4AF001C496D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C853A2E67C4AF001C496D /* SettingsView.swift */; };
+		1E7437A42F121DFD00F3D88C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437A32F121DFC00F3D88C /* AppData.swift */; };
+		1E7437A62F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */; };
+		1E7437A82F12203600F3D88C /* BUILD_FIX_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */; };
+		1E7437AA2F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */; };
+		1E7437AC2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */; };
+		1E7437AF2F12275D00F3D88C /* TIMEZONE_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */; };
+		1E7437B12F12299A00F3D88C /* AvatarStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B02F12299A00F3D88C /* AvatarStats.swift */; };
+		1E7437B32F1229B400F3D88C /* RadarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B22F1229B400F3D88C /* RadarChartView.swift */; };
+		1E7437B52F1229FC00F3D88C /* AvatarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */; };
+		1E7437B72F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */; };
+		1E7437B92F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */; };
+		1E7437BB2F122C5800F3D88C /* RADAR_CHART_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */; };
+		1E7437BD2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +68,27 @@
 		1E5C850D2E609D82001C496D /* FitAvatarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitAvatarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5C85112E609D82001C496D /* FitAvatarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitAvatarUITests.swift; sourceTree = "<group>"; };
 		1E5C85132E609D82001C496D /* FitAvatarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitAvatarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E5C852C2E60A3AB001C496D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		1E5C852E2E60A3C9001C496D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1E5C85302E60A3E5001C496D /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		1E5C85322E60A3F8001C496D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		1E5C85362E67C270001C496D /* WorkoutRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecordView.swift; sourceTree = "<group>"; };
+		1E5C85382E67C292001C496D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		1E5C853A2E67C4AF001C496D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1E7437A32F121DFC00F3D88C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IMPLEMENTATION_SUMMARY.md; sourceTree = "<group>"; };
+		1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUILD_FIX_SUMMARY.md; sourceTree = "<group>"; };
+		1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTERVAL_TIMER_FEATURE.md; sourceTree = "<group>"; };
+		1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WORKOUT_NAVIGATION_IMPROVEMENT.md; sourceTree = "<group>"; };
+		1E7437AD2F1225FC00F3D88C /* NAVIGATION_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NAVIGATION_FIX.md; sourceTree = "<group>"; };
+		1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TIMEZONE_FIX.md; sourceTree = "<group>"; };
+		1E7437B02F12299A00F3D88C /* AvatarStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStats.swift; sourceTree = "<group>"; };
+		1E7437B22F1229B400F3D88C /* RadarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartView.swift; sourceTree = "<group>"; };
+		1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarDetailView.swift; sourceTree = "<group>"; };
+		1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AVATAR_STATS_SYSTEM.md; sourceTree = "<group>"; };
+		1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_BUILD_FIX.md; sourceTree = "<group>"; };
+		1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_FIX.md; sourceTree = "<group>"; };
+		1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_GRID_FIX.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +123,7 @@
 				1E5C85062E609D81001C496D /* FitAvatarTests */,
 				1E5C85102E609D82001C496D /* FitAvatarUITests */,
 				1E5C84EF2E609D80001C496D /* Products */,
+				1E7437AD2F1225FC00F3D88C /* NAVIGATION_FIX.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +146,26 @@
 				1E5C84FA2E609D81001C496D /* Persistence.swift */,
 				1E5C84FC2E609D81001C496D /* FitAvatar.xcdatamodeld */,
 				1E5C84F72E609D81001C496D /* Preview Content */,
+				1E5C852C2E60A3AB001C496D /* MainTabView.swift */,
+				1E5C852E2E60A3C9001C496D /* HomeView.swift */,
+				1E5C85302E60A3E5001C496D /* WorkoutView.swift */,
+				1E5C85322E60A3F8001C496D /* StatisticsView.swift */,
+				1E5C85362E67C270001C496D /* WorkoutRecordView.swift */,
+				1E5C85382E67C292001C496D /* Exercise.swift */,
+				1E5C853A2E67C4AF001C496D /* SettingsView.swift */,
+				1E7437A32F121DFC00F3D88C /* AppData.swift */,
+				1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */,
+				1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */,
+				1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */,
+				1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */,
+				1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */,
+				1E7437B02F12299A00F3D88C /* AvatarStats.swift */,
+				1E7437B22F1229B400F3D88C /* RadarChartView.swift */,
+				1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */,
+				1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */,
+				1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */,
+				1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */,
+				1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */,
 			);
 			path = FitAvatar;
 			sourceTree = "<group>";
@@ -237,8 +299,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7437BB2F122C5800F3D88C /* RADAR_CHART_FIX.md in Resources */,
 				1E5C84F92E609D81001C496D /* Preview Assets.xcassets in Resources */,
+				1E7437AF2F12275D00F3D88C /* TIMEZONE_FIX.md in Resources */,
+				1E7437AC2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md in Resources */,
+				1E7437BD2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md in Resources */,
+				1E7437A62F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md in Resources */,
+				1E7437A82F12203600F3D88C /* BUILD_FIX_SUMMARY.md in Resources */,
+				1E7437AA2F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md in Resources */,
+				1E7437B72F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md in Resources */,
 				1E5C84F62E609D81001C496D /* Assets.xcassets in Resources */,
+				1E7437B92F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5C85312E60A3E5001C496D /* WorkoutView.swift in Sources */,
 				1E5C84FE2E609D81001C496D /* FitAvatar.xcdatamodeld in Sources */,
 				1E5C84FB2E609D81001C496D /* Persistence.swift in Sources */,
+				1E7437B12F12299A00F3D88C /* AvatarStats.swift in Sources */,
+				1E5C85372E67C270001C496D /* WorkoutRecordView.swift in Sources */,
 				1E5C84F42E609D80001C496D /* ContentView.swift in Sources */,
+				1E5C85392E67C292001C496D /* Exercise.swift in Sources */,
+				1E5C852F2E60A3C9001C496D /* HomeView.swift in Sources */,
+				1E7437B32F1229B400F3D88C /* RadarChartView.swift in Sources */,
+				1E5C85332E60A3F8001C496D /* StatisticsView.swift in Sources */,
 				1E5C84F22E609D80001C496D /* FitAvatarApp.swift in Sources */,
+				1E7437B52F1229FC00F3D88C /* AvatarDetailView.swift in Sources */,
+				1E5C852D2E60A3AB001C496D /* MainTabView.swift in Sources */,
+				1E5C853B2E67C4AF001C496D /* SettingsView.swift in Sources */,
+				1E7437A42F121DFD00F3D88C /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatar;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -491,7 +573,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.appTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -511,7 +593,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatarTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.appTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -529,7 +611,7 @@
 				DEVELOPMENT_TEAM = 45ND33F3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatarUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.appUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -547,7 +629,7 @@
 				DEVELOPMENT_TEAM = 45ND33F3PC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = so4.FitAvatarUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fitavatar.appUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
