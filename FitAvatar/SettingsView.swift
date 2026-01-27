@@ -11,6 +11,7 @@ struct SettingsView: View {
     @ObservedObject private var appData = AppData.shared
     @State private var showingEditNameAlert = false
     @State private var newUserName = ""
+    @State private var showingIconPicker = false
 
     var body: some View {
         NavigationView {
@@ -52,26 +53,21 @@ struct SettingsView: View {
     // MARK: - Profile Section
     private var profileSection: some View {
         Section {
+            // プロフィールアイコンと名前
             HStack {
-                // アバターアイコン
-                ZStack {
-                    Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(colors: [.blue.opacity(0.3), .purple.opacity(0.3)]),
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        ))
-                        .frame(width: 70, height: 70)
-
-                    Image(systemName: "person.fill")
-                        .font(.system(size: 35))
-                        .foregroundColor(.blue)
+                // プロフィールアイコン
+                Button(action: {
+                    showingIconPicker = true
+                }) {
+                    profileIconView
                 }
+                .buttonStyle(PlainButtonStyle())
 
                 VStack(alignment: .leading, spacing: 4) {
                     Text(appData.userName)
                         .font(.title2)
                         .fontWeight(.bold)
+                        .foregroundColor(.primary)
                 }
 
                 Spacer()
@@ -86,8 +82,77 @@ struct SettingsView: View {
                 }
             }
             .padding(.vertical, 8)
+
+            // アイコン変更ボタン
+            Button(action: {
+                showingIconPicker = true
+            }) {
+                HStack {
+                    Label("アイコンを変更", systemImage: "photo.circle.fill")
+                        .foregroundColor(.blue)
+
+                    Spacer()
+
+                    Image(systemName: "chevron.right")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
         } header: {
             Text("プロフィール")
+        }
+        .sheet(isPresented: $showingIconPicker) {
+            ProfileIconPickerView()
+        }
+    }
+
+    // プロフィールアイコン表示
+    private var profileIconView: some View {
+        Group {
+            switch appData.profileIconType {
+            case .photo:
+                if let photoData = appData.profilePhotoData,
+                   let uiImage = UIImage(data: photoData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 70, height: 70)
+                        .clipShape(Circle())
+                } else {
+                    defaultIconPlaceholder
+                }
+            case .defaultIcon:
+                if let iconID = appData.profileIconID,
+                   let icon = DefaultIcon.allIcons.first(where: { $0.id == iconID }) {
+                    ZStack {
+                        Circle()
+                            .fill(icon.color.opacity(0.2))
+                            .frame(width: 70, height: 70)
+
+                        Image(systemName: icon.systemName)
+                            .font(.system(size: 35))
+                            .foregroundColor(icon.color)
+                    }
+                } else {
+                    defaultIconPlaceholder
+                }
+            }
+        }
+    }
+
+    private var defaultIconPlaceholder: some View {
+        ZStack {
+            Circle()
+                .fill(LinearGradient(
+                    gradient: Gradient(colors: [.blue.opacity(0.3), .purple.opacity(0.3)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .frame(width: 70, height: 70)
+
+            Image(systemName: "person.fill")
+                .font(.system(size: 35))
+                .foregroundColor(.blue)
         }
     }
 

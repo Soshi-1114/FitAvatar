@@ -27,6 +27,7 @@
 		1E7437B32F1229B400F3D88C /* RadarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B22F1229B400F3D88C /* RadarChartView.swift */; };
 		1E7437B52F1229FC00F3D88C /* AvatarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */; };
 		1EE1BF972F290281006D2288 /* WorkoutModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1BF962F290281006D2288 /* WorkoutModels.swift */; };
+		8E66FA0E158D4833BD44AC7A /* ProfileIconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1D7A79750473383704A91 /* ProfileIconPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		1E7437B22F1229B400F3D88C /* RadarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartView.swift; sourceTree = "<group>"; };
 		1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarDetailView.swift; sourceTree = "<group>"; };
 		1EE1BF962F290281006D2288 /* WorkoutModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModels.swift; sourceTree = "<group>"; };
+		9BD1D7A79750473383704A91 /* ProfileIconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIconPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				1E7437B22F1229B400F3D88C /* RadarChartView.swift */,
 				1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */,
 				1EE1BF962F290281006D2288 /* WorkoutModels.swift */,
+				9BD1D7A79750473383704A91 /* ProfileIconPickerView.swift */,
 			);
 			path = FitAvatar;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				1EE1BF972F290281006D2288 /* WorkoutModels.swift in Sources */,
 				1E5C853B2E67C4AF001C496D /* SettingsView.swift in Sources */,
 				1E7437A42F121DFD00F3D88C /* AppData.swift in Sources */,
+				8E66FA0E158D4833BD44AC7A /* ProfileIconPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
