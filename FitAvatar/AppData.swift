@@ -270,7 +270,7 @@ struct ExportData: Codable {
 }
 
 // MARK: - WorkoutRecord Codable Extension
-extension WorkoutRecord: Codable {
+extension WorkoutRecord {
     enum CodingKeys: String, CodingKey {
         case id, exerciseName, category, sets, durationMinutes, xpEarned, date, details
     }

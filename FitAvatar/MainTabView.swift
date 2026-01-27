@@ -24,12 +24,6 @@ struct MainTabView: View {
                     Text("ワークアウト")
                 }
             
-            StatisticsView()
-                .tabItem {
-                    Image(systemName: "chart.bar.fill")
-                    Text("統計")
-                }
-            
             SettingsView()
                 .tabItem {
                     Image(systemName: "gearshape.fill")
