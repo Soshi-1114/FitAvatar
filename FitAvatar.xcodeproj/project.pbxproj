@@ -19,7 +19,6 @@
 		1E5C852D2E60A3AB001C496D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C852C2E60A3AB001C496D /* MainTabView.swift */; };
 		1E5C852F2E60A3C9001C496D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C852E2E60A3C9001C496D /* HomeView.swift */; };
 		1E5C85312E60A3E5001C496D /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85302E60A3E5001C496D /* WorkoutView.swift */; };
-		1E5C85332E60A3F8001C496D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85322E60A3F8001C496D /* StatisticsView.swift */; };
 		1E5C85372E67C270001C496D /* WorkoutRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85362E67C270001C496D /* WorkoutRecordView.swift */; };
 		1E5C85392E67C292001C496D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85382E67C292001C496D /* Exercise.swift */; };
 		1E5C853B2E67C4AF001C496D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C853A2E67C4AF001C496D /* SettingsView.swift */; };
@@ -72,7 +71,6 @@
 		1E5C852C2E60A3AB001C496D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		1E5C852E2E60A3C9001C496D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1E5C85302E60A3E5001C496D /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
-		1E5C85322E60A3F8001C496D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		1E5C85362E67C270001C496D /* WorkoutRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRecordView.swift; sourceTree = "<group>"; };
 		1E5C85382E67C292001C496D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		1E5C853A2E67C4AF001C496D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				1E5C852C2E60A3AB001C496D /* MainTabView.swift */,
 				1E5C852E2E60A3C9001C496D /* HomeView.swift */,
 				1E5C85302E60A3E5001C496D /* WorkoutView.swift */,
-				1E5C85322E60A3F8001C496D /* StatisticsView.swift */,
 				1E5C85362E67C270001C496D /* WorkoutRecordView.swift */,
 				1E5C85382E67C292001C496D /* Exercise.swift */,
 				1E5C853A2E67C4AF001C496D /* SettingsView.swift */,
@@ -346,7 +343,6 @@
 				1E5C85392E67C292001C496D /* Exercise.swift in Sources */,
 				1E5C852F2E60A3C9001C496D /* HomeView.swift in Sources */,
 				1E7437B32F1229B400F3D88C /* RadarChartView.swift in Sources */,
-				1E5C85332E60A3F8001C496D /* StatisticsView.swift in Sources */,
 				1E5C84F22E609D80001C496D /* FitAvatarApp.swift in Sources */,
 				1E7437B52F1229FC00F3D88C /* AvatarDetailView.swift in Sources */,
 				1E5C852D2E60A3AB001C496D /* MainTabView.swift in Sources */,
