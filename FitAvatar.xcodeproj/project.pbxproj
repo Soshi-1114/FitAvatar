@@ -23,18 +23,9 @@
 		1E5C85392E67C292001C496D /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C85382E67C292001C496D /* Exercise.swift */; };
 		1E5C853B2E67C4AF001C496D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5C853A2E67C4AF001C496D /* SettingsView.swift */; };
 		1E7437A42F121DFD00F3D88C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437A32F121DFC00F3D88C /* AppData.swift */; };
-		1E7437A62F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */; };
-		1E7437A82F12203600F3D88C /* BUILD_FIX_SUMMARY.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */; };
-		1E7437AA2F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */; };
-		1E7437AC2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */; };
-		1E7437AF2F12275D00F3D88C /* TIMEZONE_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */; };
 		1E7437B12F12299A00F3D88C /* AvatarStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B02F12299A00F3D88C /* AvatarStats.swift */; };
 		1E7437B32F1229B400F3D88C /* RadarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B22F1229B400F3D88C /* RadarChartView.swift */; };
 		1E7437B52F1229FC00F3D88C /* AvatarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */; };
-		1E7437B72F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */; };
-		1E7437B92F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */; };
-		1E7437BB2F122C5800F3D88C /* RADAR_CHART_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */; };
-		1E7437BD2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */; };
 		1EE1BF972F290281006D2288 /* WorkoutModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1BF962F290281006D2288 /* WorkoutModels.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,19 +66,9 @@
 		1E5C85382E67C292001C496D /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		1E5C853A2E67C4AF001C496D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1E7437A32F121DFC00F3D88C /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IMPLEMENTATION_SUMMARY.md; sourceTree = "<group>"; };
-		1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = BUILD_FIX_SUMMARY.md; sourceTree = "<group>"; };
-		1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTERVAL_TIMER_FEATURE.md; sourceTree = "<group>"; };
-		1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = WORKOUT_NAVIGATION_IMPROVEMENT.md; sourceTree = "<group>"; };
-		1E7437AD2F1225FC00F3D88C /* NAVIGATION_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = NAVIGATION_FIX.md; sourceTree = "<group>"; };
-		1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TIMEZONE_FIX.md; sourceTree = "<group>"; };
 		1E7437B02F12299A00F3D88C /* AvatarStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStats.swift; sourceTree = "<group>"; };
 		1E7437B22F1229B400F3D88C /* RadarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartView.swift; sourceTree = "<group>"; };
 		1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarDetailView.swift; sourceTree = "<group>"; };
-		1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AVATAR_STATS_SYSTEM.md; sourceTree = "<group>"; };
-		1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_BUILD_FIX.md; sourceTree = "<group>"; };
-		1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_FIX.md; sourceTree = "<group>"; };
-		1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RADAR_CHART_GRID_FIX.md; sourceTree = "<group>"; };
 		1EE1BF962F290281006D2288 /* WorkoutModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +104,6 @@
 				1E5C85062E609D81001C496D /* FitAvatarTests */,
 				1E5C85102E609D82001C496D /* FitAvatarUITests */,
 				1E5C84EF2E609D80001C496D /* Products */,
-				1E7437AD2F1225FC00F3D88C /* NAVIGATION_FIX.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,18 +133,9 @@
 				1E5C85382E67C292001C496D /* Exercise.swift */,
 				1E5C853A2E67C4AF001C496D /* SettingsView.swift */,
 				1E7437A32F121DFC00F3D88C /* AppData.swift */,
-				1E7437A52F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md */,
-				1E7437A72F12203600F3D88C /* BUILD_FIX_SUMMARY.md */,
-				1E7437A92F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md */,
-				1E7437AB2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md */,
-				1E7437AE2F12275D00F3D88C /* TIMEZONE_FIX.md */,
 				1E7437B02F12299A00F3D88C /* AvatarStats.swift */,
 				1E7437B22F1229B400F3D88C /* RadarChartView.swift */,
 				1E7437B42F1229FC00F3D88C /* AvatarDetailView.swift */,
-				1E7437B62F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md */,
-				1E7437B82F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md */,
-				1E7437BA2F122C5800F3D88C /* RADAR_CHART_FIX.md */,
-				1E7437BC2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md */,
 				1EE1BF962F290281006D2288 /* WorkoutModels.swift */,
 			);
 			path = FitAvatar;
@@ -299,17 +270,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7437BB2F122C5800F3D88C /* RADAR_CHART_FIX.md in Resources */,
 				1E5C84F92E609D81001C496D /* Preview Assets.xcassets in Resources */,
-				1E7437AF2F12275D00F3D88C /* TIMEZONE_FIX.md in Resources */,
-				1E7437AC2F1224EC00F3D88C /* WORKOUT_NAVIGATION_IMPROVEMENT.md in Resources */,
-				1E7437BD2F122D7A00F3D88C /* RADAR_CHART_GRID_FIX.md in Resources */,
-				1E7437A62F121F1200F3D88C /* IMPLEMENTATION_SUMMARY.md in Resources */,
-				1E7437A82F12203600F3D88C /* BUILD_FIX_SUMMARY.md in Resources */,
-				1E7437AA2F12225900F3D88C /* INTERVAL_TIMER_FEATURE.md in Resources */,
-				1E7437B72F122A4800F3D88C /* AVATAR_STATS_SYSTEM.md in Resources */,
 				1E5C84F62E609D81001C496D /* Assets.xcassets in Resources */,
-				1E7437B92F122AF600F3D88C /* RADAR_CHART_BUILD_FIX.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
