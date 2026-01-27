@@ -9,14 +9,39 @@ import SwiftUI
 import UIKit
 import Combine
 
+// プロフィールアイコンの種類
+enum ProfileIconType: String, Codable {
+    case defaultIcon
+    case photo
+}
+
 // アプリ全体で共有するデータストア
 class AppData: ObservableObject {
     static let shared = AppData()
-    
+
     // ユーザー名
     @Published var userName: String {
         didSet {
             UserDefaults.standard.set(userName, forKey: "userName")
+        }
+    }
+
+    // プロフィールアイコン設定
+    @Published var profileIconType: ProfileIconType {
+        didSet {
+            UserDefaults.standard.set(profileIconType.rawValue, forKey: "profileIconType")
+        }
+    }
+
+    @Published var profileIconID: String? {
+        didSet {
+            UserDefaults.standard.set(profileIconID, forKey: "profileIconID")
+        }
+    }
+
+    @Published var profilePhotoData: Data? {
+        didSet {
+            UserDefaults.standard.set(profilePhotoData, forKey: "profilePhotoData")
         }
     }
     
@@ -96,7 +121,13 @@ class AppData: ObservableObject {
     private init() {
         // UserDefaultsから値を読み込む
         self.userName = UserDefaults.standard.string(forKey: "userName") ?? "トレーニー"
-        
+
+        // プロフィールアイコン設定を読み込む
+        let profileIconTypeString = UserDefaults.standard.string(forKey: "profileIconType") ?? ProfileIconType.defaultIcon.rawValue
+        self.profileIconType = ProfileIconType(rawValue: profileIconTypeString) ?? .defaultIcon
+        self.profileIconID = UserDefaults.standard.string(forKey: "profileIconID") ?? "person.fill"
+        self.profilePhotoData = UserDefaults.standard.data(forKey: "profilePhotoData")
+
         let appearanceModeString = UserDefaults.standard.string(forKey: "appearanceMode") ?? AppearanceMode.system.rawValue
         self.appearanceMode = AppearanceMode(rawValue: appearanceModeString) ?? .system
         

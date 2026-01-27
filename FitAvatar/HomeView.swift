@@ -19,9 +19,6 @@ struct HomeView: View {
                     // ヘッダー部分
                     headerSection
 
-                    // 今日のトレーニング部分
-                    todayWorkoutSection
-
                     // 統計セクション
                     Divider()
                         .padding(.vertical, 10)
@@ -52,7 +49,11 @@ struct HomeView: View {
     
     // MARK: - Header Section
     private var headerSection: some View {
-        HStack {
+        HStack(spacing: 15) {
+            // プロフィールアイコン
+            profileIconView
+                .frame(width: 60, height: 60)
+
             VStack(alignment: .leading) {
                 Text("おかえりなさい！")
                     .font(.title2)
@@ -61,9 +62,9 @@ struct HomeView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
             }
-            
+
             Spacer()
-            
+
             // 通知ボタン
             Button(action: {
                 // 通知機能は後で実装
@@ -74,52 +75,57 @@ struct HomeView: View {
             }
         }
     }
-    
-    // MARK: - Today's Workout Section
-    private var todayWorkoutSection: some View {
-        VStack(spacing: 15) {
-            HStack {
-                Text("今日のトレーニング")
-                    .font(.headline)
-                
-                Spacer()
-                
-                Button("すべて見る") {
-                    // ワークアウト画面へのナビゲーション
+
+    // プロフィールアイコン表示
+    private var profileIconView: some View {
+        Group {
+            switch appData.profileIconType {
+            case .photo:
+                if let photoData = appData.profilePhotoData,
+                   let uiImage = UIImage(data: photoData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 60, height: 60)
+                        .clipShape(Circle())
+                } else {
+                    defaultIconPlaceholder
                 }
-                .font(.subheadline)
-                .foregroundColor(.blue)
-            }
-            
-            let todayRecords = appData.getTodayWorkouts()
-            
-            if todayRecords.isEmpty {
-                VStack(spacing: 10) {
-                    Image(systemName: "calendar.badge.plus")
-                        .font(.system(size: 40))
-                        .foregroundColor(.gray)
-                    
-                    Text("今日のトレーニングを\n追加しましょう！")
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.secondary)
-                }
-                .frame(height: 120)
-                .frame(maxWidth: .infinity)
-                .background(Color.gray.opacity(0.1))
-                .cornerRadius(15)
-            } else {
-                LazyVGrid(columns: [
-                    GridItem(.flexible()),
-                    GridItem(.flexible())
-                ], spacing: 10) {
-                    ForEach(todayRecords) { workout in
-                        CompletedWorkoutCard(workout: workout)
+            case .defaultIcon:
+                if let iconID = appData.profileIconID,
+                   let icon = DefaultIcon.allIcons.first(where: { $0.id == iconID }) {
+                    ZStack {
+                        Circle()
+                            .fill(icon.color.opacity(0.2))
+                            .frame(width: 60, height: 60)
+
+                        Image(systemName: icon.systemName)
+                            .font(.system(size: 30))
+                            .foregroundColor(icon.color)
                     }
+                } else {
+                    defaultIconPlaceholder
                 }
             }
         }
     }
-    
+
+    private var defaultIconPlaceholder: some View {
+        ZStack {
+            Circle()
+                .fill(LinearGradient(
+                    gradient: Gradient(colors: [.blue.opacity(0.3), .purple.opacity(0.3)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .frame(width: 60, height: 60)
+
+            Image(systemName: "person.fill")
+                .font(.system(size: 30))
+                .foregroundColor(.blue)
+        }
+    }
+
     // MARK: - Period Selection Section
     private var periodSelectionSection: some View {
         VStack(spacing: 10) {
@@ -314,35 +320,6 @@ struct HomeView: View {
     
     private func categoryCount(for category: MainCategory) -> Int {
         filteredWorkouts.filter { $0.category == category }.count
-    }
-}
-
-// MARK: - Completed Workout Card Component
-struct CompletedWorkoutCard: View {
-    let workout: WorkoutRecord
-    
-    var body: some View {
-        HStack {
-            Image(systemName: "dumbbell")
-                .font(.title2)
-                .foregroundColor(.green)
-            
-            VStack(alignment: .leading) {
-                Text(workout.exerciseName)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
-                
-                Text("完了 - \(workout.sets)セット")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
-            
-            Spacer()
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(10)
-        .shadow(color: .gray.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
 
