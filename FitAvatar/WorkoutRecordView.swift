@@ -44,7 +44,7 @@ struct WorkoutRecordView: View {
                 completedSetsSection
                 
                 // タイマーセクション（有酸素運動以外）
-                if exercise.trainingType != .cardio {
+                if exercise.mainCategory != .cardio {
                     timerSection
                 }
                 
@@ -107,15 +107,13 @@ struct WorkoutRecordView: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            switch exercise.trainingType {
-            case .weighted:
+            // 器具の種類に基づいて入力セクションを切り替え
+            if exercise.equipment == .barbell || exercise.equipment == .dumbbell || exercise.equipment == .kettlebell || exercise.equipment == .machine {
                 weightedInputSection
-            case .bodyweight:
-                bodyweightInputSection
-            case .timed:
+            } else if exercise.mainCategory == .cardio {
                 timedInputSection
-            case .cardio:
-                cardioInputSection
+            } else {
+                bodyweightInputSection
             }
         }
         .padding()
@@ -353,7 +351,7 @@ struct WorkoutRecordView: View {
         }
         
         // インターバルタイマー自動開始（タイマーがオンで、有酸素運動以外の場合）
-        if !sets.isEmpty && exercise.trainingType != .cardio && isTimerEnabled {
+        if !sets.isEmpty && exercise.mainCategory != .cardio && isTimerEnabled {
             resetTimer()
             startTimer()
         }
@@ -407,12 +405,9 @@ struct WorkoutRecordView: View {
         
         // 総時間計算
         let totalMinutes: Int = {
-            switch exercise.trainingType {
-            case .cardio:
+            if exercise.mainCategory == .cardio {
                 return sets.reduce(0) { $0 + ($1.durationMinutes ?? 0) }
-            case .timed:
-                return sets.reduce(0) { $0 + (($1.durationSeconds ?? 0) / 60) }
-            default:
+            } else {
                 return sets.count * 2 // 1セットあたり2分と仮定
             }
         }()
@@ -430,7 +425,7 @@ struct WorkoutRecordView: View {
         // WorkoutRecordを作成して保存
         let record = WorkoutRecord(
             exerciseName: exercise.name,
-            category: exercise.category,
+            category: exercise.mainCategory,
             sets: sets.count,
             durationMinutes: totalMinutes,
             xpEarned: totalXP,
@@ -513,20 +508,14 @@ struct CompletedSetRow: View {
     }
     
     private var setDescription: String {
-        switch exercise.trainingType {
-        case .weighted:
+        // 器具の種類または種目タイプで判定
+        if exercise.equipment == .barbell || exercise.equipment == .dumbbell || exercise.equipment == .kettlebell || exercise.equipment == .machine {
+            // ウェイトトレーニング
             if let weight = set.weight, let reps = set.reps {
                 return String(format: "%.1fkg × %d回", weight, reps)
             }
-        case .bodyweight:
-            if let reps = set.reps {
-                return "\(reps)回"
-            }
-        case .timed:
-            if let duration = set.durationSeconds {
-                return "\(duration)秒"
-            }
-        case .cardio:
+        } else if exercise.mainCategory == .cardio {
+            // 有酸素運動
             var parts: [String] = []
             if let distance = set.distance {
                 parts.append(String(format: "%.1fkm", distance))
@@ -535,6 +524,14 @@ struct CompletedSetRow: View {
                 parts.append("\(duration)分")
             }
             return parts.joined(separator: " / ")
+        } else {
+            // 自重トレーニング
+            if let reps = set.reps {
+                return "\(reps)回"
+            }
+            if let duration = set.durationSeconds {
+                return "\(duration)秒"
+            }
         }
         return ""
     }

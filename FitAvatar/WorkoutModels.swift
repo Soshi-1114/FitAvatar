@@ -24,14 +24,14 @@ struct DayData: Codable {
 struct WorkoutRecord: Identifiable {
     let id: UUID
     let exerciseName: String
-    let category: ExerciseCategory
+    let category: MainCategory
     let sets: Int
     let durationMinutes: Int
     let xpEarned: Int
     let date: Date
     let details: [WorkoutSetDetail]
     
-    init(id: UUID = UUID(), exerciseName: String, category: ExerciseCategory, sets: Int, durationMinutes: Int, xpEarned: Int, date: Date, details: [WorkoutSetDetail] = []) {
+    init(id: UUID = UUID(), exerciseName: String, category: MainCategory, sets: Int, durationMinutes: Int, xpEarned: Int, date: Date, details: [WorkoutSetDetail] = []) {
         self.id = id
         self.exerciseName = exerciseName
         self.category = category

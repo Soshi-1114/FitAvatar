@@ -154,7 +154,7 @@ struct RadarDataPoint: Identifiable {
 extension Exercise {
     // このエクササイズで鍛えられる部位
     var trainedBodyParts: [BodyPart] {
-        switch category {
+        switch mainCategory {
         case .upperBody:
             // 上半身トレーニング
             if name.contains("プッシュアップ") || name.contains("ベンチプレス") {
@@ -172,10 +172,18 @@ extension Exercise {
         case .core:
             // 体幹トレーニング
             return [.abs]
-            
+
         case .cardio:
             // 有酸素運動（全身）
             return [.legs, .abs]
+
+        case .functional:
+            // 機能的トレーニング（全身）
+            return [.arms, .legs, .abs]
+
+        case .flexibility:
+            // ストレッチ・柔軟性（全身）
+            return [.abs, .back]
         }
     }
 }

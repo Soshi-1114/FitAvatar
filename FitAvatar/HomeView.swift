@@ -227,7 +227,7 @@ struct HomeView: View {
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            ForEach(ExerciseCategory.allCases, id: \.self) { category in
+            ForEach(MainCategory.allCases, id: \.self) { category in
                 CategoryStatRow(
                     category: category,
                     count: categoryCount(for: category),
@@ -312,7 +312,7 @@ struct HomeView: View {
         }
     }
     
-    private func categoryCount(for category: ExerciseCategory) -> Int {
+    private func categoryCount(for category: MainCategory) -> Int {
         filteredWorkouts.filter { $0.category == category }.count
     }
 }
@@ -390,7 +390,7 @@ struct StatisticCard: View {
 
 // MARK: - Category Stat Row
 struct CategoryStatRow: View {
-    let category: ExerciseCategory
+    let category: MainCategory
     let count: Int
     let totalCount: Int
     
@@ -440,6 +440,10 @@ struct CategoryStatRow: View {
             return .orange
         case .cardio:
             return .red
+        case .functional:
+            return .purple
+        case .flexibility:
+            return .pink
         }
     }
 }
@@ -512,6 +516,10 @@ struct WorkoutHistoryRow: View {
             return .orange
         case .cardio:
             return .red
+        case .functional:
+            return .purple
+        case .flexibility:
+            return .pink
         }
     }
     
