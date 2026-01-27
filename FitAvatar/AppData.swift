@@ -145,8 +145,8 @@ class AppData: ObservableObject {
            let decoded = try? JSONDecoder().decode([WorkoutRecord].self, from: data) {
             workoutHistory = decoded
         } else {
-            // サンプルデータを初期化（開発時のみ）
-            workoutHistory = WorkoutHistory.sampleData.workouts
+            // 空の配列で初期化
+            workoutHistory = []
         }
     }
     
@@ -270,7 +270,7 @@ struct ExportData: Codable {
 }
 
 // MARK: - WorkoutRecord Codable Extension
-extension WorkoutRecord {
+extension WorkoutRecord: Codable {
     enum CodingKeys: String, CodingKey {
         case id, exerciseName, category, sets, durationMinutes, xpEarned, date, details
     }
