@@ -280,7 +280,7 @@ extension WorkoutRecord: Codable {
         let idString = try container.decode(String.self, forKey: .id)
         id = UUID(uuidString: idString) ?? UUID()
         exerciseName = try container.decode(String.self, forKey: .exerciseName)
-        category = try container.decode(ExerciseCategory.self, forKey: .category)
+        category = try container.decode(MainCategory.self, forKey: .category)
         sets = try container.decode(Int.self, forKey: .sets)
         durationMinutes = try container.decode(Int.self, forKey: .durationMinutes)
         xpEarned = try container.decode(Int.self, forKey: .xpEarned)
