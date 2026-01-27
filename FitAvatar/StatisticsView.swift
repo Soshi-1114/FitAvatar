@@ -102,6 +102,7 @@ struct StatisticsView: View {
 
                 VStack(spacing: 10) {
                     // 簡易的な棒グラフ表示
+                    let maxCount = weeklyData.map(\.count).max() ?? 1
                     HStack(alignment: .bottom, spacing: 8) {
                         ForEach(weeklyData, id: \.day) { data in
                             VStack {
@@ -112,9 +113,10 @@ struct StatisticsView: View {
 
                                     VStack {
                                         Spacer()
+                                        let normalizedHeight = maxCount > 0 ? CGFloat(data.count) / CGFloat(maxCount) * 100 : 0
                                         RoundedRectangle(cornerRadius: 4)
                                             .fill(Color.blue)
-                                            .frame(width: 30, height: CGFloat(data.count) * 15)
+                                            .frame(width: 30, height: normalizedHeight)
                                     }
                                 }
                                 .frame(height: 100)

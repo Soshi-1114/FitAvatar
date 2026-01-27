@@ -15,13 +15,13 @@ enum TimePeriod: String, CaseIterable, Codable {
 }
 
 // MARK: - Day Data
-struct DayData {
+struct DayData: Codable {
     let day: String
     let count: Int
 }
 
 // MARK: - Workout Record Model
-struct WorkoutRecord: Identifiable, Codable {
+struct WorkoutRecord: Identifiable {
     let id: UUID
     let exerciseName: String
     let category: ExerciseCategory
@@ -66,72 +66,3 @@ struct WorkoutSetDetail: Codable, Hashable {
     }
 }
 
-// MARK: - Workout History Model
-struct WorkoutHistory {
-    var workouts: [WorkoutRecord]
-
-    // サンプルデータ
-    static var sampleData: WorkoutHistory {
-        let calendar = Calendar.current
-        let today = Date()
-
-        return WorkoutHistory(workouts: [
-            WorkoutRecord(
-                exerciseName: "プッシュアップ",
-                category: .upperBody,
-                sets: 3,
-                durationMinutes: 15,
-                xpEarned: 45,
-                date: today
-            ),
-            WorkoutRecord(
-                exerciseName: "スクワット",
-                category: .lowerBody,
-                sets: 4,
-                durationMinutes: 20,
-                xpEarned: 60,
-                date: calendar.date(byAdding: .day, value: -1, to: today)!
-            ),
-            WorkoutRecord(
-                exerciseName: "プランク",
-                category: .core,
-                sets: 3,
-                durationMinutes: 12,
-                xpEarned: 36,
-                date: calendar.date(byAdding: .day, value: -2, to: today)!
-            ),
-            WorkoutRecord(
-                exerciseName: "ランニング",
-                category: .cardio,
-                sets: 1,
-                durationMinutes: 30,
-                xpEarned: 90,
-                date: calendar.date(byAdding: .day, value: -3, to: today)!
-            ),
-            WorkoutRecord(
-                exerciseName: "ダンベルベンチプレス",
-                category: .upperBody,
-                sets: 4,
-                durationMinutes: 25,
-                xpEarned: 75,
-                date: calendar.date(byAdding: .day, value: -4, to: today)!
-            ),
-            WorkoutRecord(
-                exerciseName: "ランジ",
-                category: .lowerBody,
-                sets: 3,
-                durationMinutes: 18,
-                xpEarned: 54,
-                date: calendar.date(byAdding: .day, value: -5, to: today)!
-            ),
-            WorkoutRecord(
-                exerciseName: "クランチ",
-                category: .core,
-                sets: 3,
-                durationMinutes: 10,
-                xpEarned: 30,
-                date: calendar.date(byAdding: .day, value: -6, to: today)!
-            )
-        ])
-    }
-}
